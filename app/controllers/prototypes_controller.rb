@@ -55,8 +55,9 @@ def prototype_params
 end
 
 def move_to_index
-  unless user_signed_in?
-    redirect_to action: :index
+  redirect_to action: :index
+  unless 
+    current_user == @prototype.user
   end
 end
 
