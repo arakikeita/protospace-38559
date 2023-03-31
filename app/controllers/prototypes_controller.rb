@@ -13,6 +13,7 @@ class PrototypesController < ApplicationController
   end
 
   def create
+    binding.pry
     @prototype = Prototype.new(prototype_params)
     if @prototype.save
       redirect_to action: :index
